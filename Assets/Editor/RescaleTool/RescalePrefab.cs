@@ -34,14 +34,13 @@ namespace VFS.Tools
             _settings.ShowWindow();
         }
 
+        /*
         //direct select prefab in Asset folder, show scale selector window, single object only
         [MenuItem("Assets/RescaleTool/Rescale")]
-        public static void ReScalePrefab()
+        public static void ReScalePrefab(MenuCommand menuCommand)
         {
             //working single prefab
-
-            //_selectedPrefab = Selection.activeGameObject;
-            gos[0] = Selection.activeGameObject;
+            gos[0] = menuCommand.context as GameObject; 
 
             if (_setterWindow == null)
                 _setterWindow = (RescaleScaleSetterWindow)RescaleScaleSetterWindow.CreateInstance("RescaleScaleSetterWindow");
@@ -49,6 +48,7 @@ namespace VFS.Tools
             _setterWindow.ShowWindow();
             _scaleString = _setterWindow.GetScaleString();
         }
+        */
 
         //select transform to perform rescale, single object only
         [MenuItem("CONTEXT/Transform/Rescale/Using This Scale")]
@@ -68,12 +68,8 @@ namespace VFS.Tools
 
         //select game object in hierarchy
         [MenuItem("GameObject/Prefab/Rescale/GameObjects")]
-        public static void ReScaleThisGameObject(MenuCommand menuCommand)
+        public static void ReScaleThisGameObject()
         {
-            /*
-            GameObject go = menuCommand.context as GameObject;
-            ReScaleWithCurrentScale(go.transform);
-            */
             if(gos == null)
                 gos = Selection.gameObjects;
             if(_gameObjectsWindow == null) { 
