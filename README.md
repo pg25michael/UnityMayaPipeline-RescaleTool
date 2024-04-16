@@ -29,12 +29,16 @@ B. Transform modified
 5. right click on transform to open context menu
 6. choose Rescale > Using this scale > Ok to rescale selected object.
 
+
+8. wait for the process to end.
+9. inspect the transform > scale in the selected object.
+
+
+####**Unusable feature*
+The following feature of selecting a prefab and input a scale was unusable and commented out due to a bug that selecting the prefab will cause an error.
 C. Prefab modified
 4. select one prefab from Assets
 5. right click on prefab to open context menu
 6. choose RescaleTool > Rescale to open up input window 
 7. input desire scale and click on confirm > OK to rescale selected object.
 
-
-8. wait for the process to end.
-9. inspect the transform > scale in the selected object.
